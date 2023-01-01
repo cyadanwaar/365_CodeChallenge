@@ -1,0 +1,13 @@
+# This problem is from codeforces problem no = 71A.
+
+def way_too_large_words(text):
+    if len(text) <=10:
+        print(text)
+        return
+    print(text[0] + str(len(text)-2) + text[-1])
+
+n = int(input())
+
+for i in range(n):
+    word = input()
+    way_too_large_words(word)
