@@ -1,0 +1,7 @@
+# This code adds the previous element of an array into the next element and so on.
+class Solution(object):
+    def runningSum(self, nums):
+        output = [nums[0]]
+        for i in range(len(nums)-1):
+            output.append(output[i]+nums[i+1])
+        return output
