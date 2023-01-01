@@ -1,0 +1,11 @@
+# This problem is from code forces problem no = 4A
+
+def watermelon(w):
+# If this condition is not working you can also try w % 2 == 0 and w != 2: and then it would work
+    if w % 2 == 0:
+        print("YES")
+        return
+    print("NO")
+
+weight = int(input())
+watermelon(weight)
