@@ -1,0 +1,15 @@
+# This problem is from codeforces and the problem no = 236A
+
+def solution(text):
+    x = []
+    for i in text:
+        if i not in x:
+            x.append(i)
+    
+    if len(x) % 2 == 0:
+        print("CHAT WITH HER!") 
+    else:
+        print("IGNORE HIM!') 
+    
+word = input()
+solution(word)
