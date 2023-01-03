@@ -1,0 +1,19 @@
+# This problem is from leetcode = Roman to integer.
+
+class Solution(object):
+    def romanToInt(self, s):
+        l = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+        new = list(s.upper())
+        new.append(1)
+        x = 0
+        for i in range(len(new)-1):
+            if new[i] == "I" and new[i+1] in ["V", "X"]:
+                x = x - 1
+            elif new[i] == "X" and new[i+1] in ["L", "C"]:
+                x = x - 10
+            elif new[i] == "C" and new[i+1] in ["D", "M"]:
+                x = x - 100
+            else:
+                x = x + l.get(new[i])
+        return x
+        
