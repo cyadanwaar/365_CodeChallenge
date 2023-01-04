@@ -1,0 +1,20 @@
+# This code removes duplicates from the sorted linked list and this problem is solved from leetcode.
+
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution(object):
+    def deleteDuplicates(self, head):
+        """
+        :type head: ListNode
+        :rtype: ListNode
+        """
+        temp_node = head
+        while temp_node and temp_node.next:
+            if temp_node.val == temp_node.next.val:
+                temp_node.next = temp_node.next.next
+            else:
+                temp_node = temp_node.next
+        return head
