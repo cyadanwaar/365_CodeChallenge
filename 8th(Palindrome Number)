@@ -13,22 +13,10 @@ class Solution:
             else:
                 z.append(int(x[i]))
             i+=1
-        mid = len(z)//2
-        
+
         if len(z) == 1 and z[0] < 0:
             return False
-        elif len(z) %2 == 0:
-            left = z[0:mid]
-            right= z[mid::]
-            if left == right[-1::-1]:
-                return True
-            else:
-                return False
         else:
-            left = z[0:mid]
-            right= z[mid+1::]
-            if left == right[-1::-1]:
+            if z[0:] == z[-1::-1]:
                 return True
-            else:
-                return False
-     
+            return False
