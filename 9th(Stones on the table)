@@ -1,0 +1,14 @@
+# This problem is taken from codeforces and problem no = 266A (Stones on the table
+
+def stones(s):
+    output = []
+    for i in range(len(s)-1):
+        if s[i] == s[i+1]:
+            output.append(s[i])
+
+    return len(output)
+
+n = int(input())
+word = input()
+if len(word) == n:
+    print(stones(word))
