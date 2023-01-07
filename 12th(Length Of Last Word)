@@ -1,0 +1,12 @@
+# This problem is taken from leetcode in which we have to find the length of last word in a string.
+# The problem no = 58. Lenght Of Last Word
+
+class Solution(object):
+    def lengthOfLastWord(self, s):
+        s = s.split(" ")
+        if s[-1].isalpha():
+            return len(s[-1])
+        i = -1
+        while not s[i].isalpha():
+            i -= 1
+        return len(s[i])
