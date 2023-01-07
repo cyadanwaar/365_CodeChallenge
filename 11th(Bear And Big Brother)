@@ -1,0 +1,15 @@
+# This problem is taken from codeforces and here we have to find when weight of smaller bear increases from that of a larger bear if their weights increase by 3 times and 2 times respectively.
+# The problem no = 791A Bear And Big Brother
+
+def weight(limak, bob):
+    years = 0
+    while not limak > bob:
+        limak = limak * 3
+        bob = bob * 2
+        years += 1
+    return years
+
+
+first, second = (input()).split(" ")
+
+print(weight(int(first), int(second)))
