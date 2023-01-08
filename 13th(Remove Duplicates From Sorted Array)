@@ -1,0 +1,25 @@
+# This problem is taken from leetcode in which we have to remove duplicates from a sorted array.
+# The problem no = 26. Remove Duplicates from Sorted Array
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        j = 0
+        count = 1
+        for i in range(0, len(nums)):
+            if (nums[i] != nums[j]):
+                j += 1
+                nums[j] = nums[i]
+                count += 1
+        return count
+        
+        
+        
+# Another simple solution for this problem can be
+
+
+nums = set(nums)
+return len(nums)
