@@ -20,3 +20,14 @@ class Solution:
             if z[0:] == z[-1::-1]:
                 return True
             return False
+            
+## Edit: The above solution does get accepted by leet code but its not efficient nor correct. It was accepted because of some missing test cases which should have been included in the test cases by now.
+## The code written below is more efficient and correct.
+
+class Solution:
+    def isPalindrome(self, x):
+        original = str(x)
+        reversed = x[::-1]
+        if orginal == reversed:
+            return True
+        return False
