@@ -1,0 +1,27 @@
+# This problem is taken from leetcode. In this problem we have to add 1 to list in such a way that it effects the all elements of the list.
+# For Example: [1, 2, 3] = [1, 2, 4] || [9, 9,9] = [1, 0, 0, 0]
+# The problem no = 66. Plus One
+
+class Solution(object):
+    def plusOne(self, digits):
+        """
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        count = 0
+        for i in range(len(digits)):
+            if digits[i] == 9:
+                count += 1
+            else:
+                break
+        if count == len(digits):
+            digits.insert(0,0)
+        
+        i = -1
+        while True:
+            if digits[i] == 9:
+                digits[i] = 0
+                i -= 1
+            else:
+                digits[i] = digits[i] + 1
+                return digits
