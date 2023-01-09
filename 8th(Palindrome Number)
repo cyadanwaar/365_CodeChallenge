@@ -1,5 +1,7 @@
 # This problem is taken from leetcode which tells whether a number is palindrome or not.
 
+# This solution is not correct !
+
 class Solution:
     def isPalindrome(self, x):
         x = str(x)
