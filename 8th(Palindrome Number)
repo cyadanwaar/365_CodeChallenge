@@ -29,7 +29,7 @@ class Solution:
 class Solution:
     def isPalindrome(self, x):
         original = str(x)
-        reversed = x[::-1]
+        reversed = original[::-1]
         if orginal == reversed:
             return True
         return False
