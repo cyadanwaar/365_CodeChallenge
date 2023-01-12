@@ -1,0 +1,11 @@
+# This problem is taken from leetcode in which we have to return the only integer in a list which is not repeated.
+# The problem no = 136. Single Number
+
+def singleNumber(self, nums: List[int]) -> int:
+	ans = 0
+
+	for num in nums:
+		
+		ans = ans ^ num 
+	
+	return ans
