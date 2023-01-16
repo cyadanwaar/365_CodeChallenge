@@ -1,0 +1,18 @@
+# This porblem is taken from leetcode in which we have to simplify a given path to canonical path which means that we have to convert the given path to unique path.
+# The problem no = 71.Simplify Path
+
+class Solution:
+    def simplifyPath(self, path: str) -> str:
+        stack = []
+        for directory in path.split('/'):
+            if directory == '':
+                pass
+            elif directory == '.':
+                pass
+            elif directory == '..':
+                if stack:
+                    stack.pop()
+            else:
+                stack.append(directory)
+        
+        return '/' + '/'.join(stack)
