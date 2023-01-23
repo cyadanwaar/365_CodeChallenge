@@ -1,0 +1,24 @@
+# This problem is taken from leetcode in which we have to solve problem for valid parentheses.
+# The problem no = 19. Valide Parentheses
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        mapping = {
+            '}': '{',
+            ']': '[',
+            ')': '('
+        }
+        for c in s:
+            if c in "{[(":
+                stack.append(c)
+            else:
+                if stack:
+                    if mapping[c] == stack[-1]:
+                        stack.pop()
+                    else:
+                        return False
+                else:
+                    return False
+
+        return len(stack) == 0
